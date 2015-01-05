@@ -1,0 +1,12 @@
+# .gitignore
+#
+
+# node modules
+node_modules
+
+# swap files
+.swp
+
+# temporary files
+*~
+
