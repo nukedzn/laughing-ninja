@@ -1,7 +1,7 @@
 
 var path  = require( 'path' );
 var http  = require( 'http' );
-var debug = require('debug')('server:core');
+var debug = require( 'debug' )( 'server:core' );
 var conf  = require( './conf/server' );
 var app   = require( './app/app' );
 
