@@ -14,7 +14,7 @@ app.set( 'views', path.join( __dirname, '/views' ) )
 app.set( 'view engine', 'hbs' );
 
 // misc
-app.use( express.static( __dirname + '/public' ) );
+app.use( express.static( 'public/' ) );
 
 // logging
 if ( app.get( 'env' ) === 'production' ) {
