@@ -1,10 +1,33 @@
 
+var debug   = require( 'debug' )( 'app:routes' );
 var express = require( 'express' );
-var router  = express.Router();
+var fs      = require( 'fs' );
+var path    = require( 'path' );
 
-router.get( '/', function ( req, res ) {
-	res.render( 'home', { title : 'page-title' } );
+var router  = express.Router();
+var base    = path.join( __dirname, 'routes' );
+
+// read routes
+fs.readdir( base, function ( err, files ) {
+
+	if (! err ) {
+
+		files.forEach( function( file ) {
+
+			debug ( 'loading routes from file: ' + file );
+
+			try {
+				require( path.join( base, file ) )( router );
+			} catch ( e ) {
+				debug( 'error: ' + e );
+			}
+
+		} );
+
+	}
+
 } );
+
 
 module.exports = router;
 
