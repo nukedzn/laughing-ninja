@@ -7,6 +7,12 @@ var express = require( 'express' );
 var morgan  = require( 'morgan' );
 var hbs     = require( './hbs' );
 var routes  = require( './routes' );
+var models  = require( './models' );
+var conf    = require( '../conf/app' );
+
+
+// load data models
+models( conf.mongoose ).load();
 
 var app = express();
 
