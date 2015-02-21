@@ -1,4 +1,6 @@
 
+'use strict';
+
 // modules
 var path    = require( 'path' );
 var express = require( 'express' );

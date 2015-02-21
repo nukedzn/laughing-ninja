@@ -1,4 +1,6 @@
 
+'use strict';
+
 var debug   = require( 'debug' )( 'app:routes' );
 var express = require( 'express' );
 var fs      = require( 'fs' );
@@ -12,9 +14,9 @@ fs.readdir( base, function ( err, files ) {
 
 	if (! err ) {
 
-		files.forEach( function( file ) {
+		files.forEach( function ( file ) {
 
-			debug ( 'loading routes from file: ' + file );
+			debug( 'loading routes from file: ' + file );
 
 			try {
 				require( path.join( base, file ) )( router );
