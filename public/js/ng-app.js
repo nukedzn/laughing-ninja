@@ -1,6 +1,6 @@
 // ng-app.js
 
-var app = angular.module( 'app.name', [ 'ngRoute', 'app.crtls' ] );
+var app = angular.module( 'app.name', [ 'ngRoute', 'app.ctrls' ] );
 
 // routes
 app.config( [ '$routeProvider',
@@ -18,9 +18,9 @@ app.config( [ '$routeProvider',
 
 
 // controllers
-var crtls = angular.module( 'app.crtls', [] );
+var ctrls = angular.module( 'app.ctrls', [] );
 
-crtls.controller( 'mainctrl', [ '$scope',
+ctrls.controller( 'mainctrl', [ '$scope',
 	function ( $scope ) {
 		// main controller
 	} ]
