@@ -9,9 +9,9 @@ var routes  = require( './routes' );
 var app = express();
 
 // view engine
-app.engine( 'hbs', hbs.engine );
+app.engine( 'html', hbs.engine );
 app.set( 'views', path.join( __dirname, '/views' ) )
-app.set( 'view engine', 'hbs' );
+app.set( 'view engine', 'html' );
 
 // misc
 app.use( express.static( 'public/' ) );

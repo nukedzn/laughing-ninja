@@ -4,7 +4,7 @@ var exphbs = require( 'express-handlebars' );
 
 var hbs = exphbs.create({
 	defaultLayout : 'main',
-	extname       : 'hbs',
+	extname       : 'html',
 	layoutsDir    : 'app/views/layouts',
 	partialsDir   : 'app/views/partials'
 });
